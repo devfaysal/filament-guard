@@ -1,0 +1,66 @@
+{
+  "name": "devfaysal/filament-guard",
+  "description": "This is my package filament-guard",
+  "keywords": [
+    "devfaysal",
+    "laravel",
+    "filament",
+    "filament-guard"
+  ],
+  "homepage": "https://github.com/devfaysal/filament-guard",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Faysal Ahamed",
+      "email": "devfaysal@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "filament/filament": "^2.0",
+    "illuminate/contracts": "^9.0",
+    "spatie/laravel-package-tools": "^1.11",
+    "spatie/laravel-permission": "^5.5"
+  },
+  "require-dev": {
+    "nunomaduro/collision": "^6.0",
+    "nunomaduro/larastan": "^2.0.1",
+    "orchestra/testbench": "^7.0",
+    "phpstan/extension-installer": "^1.1",
+    "phpstan/phpstan-deprecation-rules": "^1.0",
+    "phpstan/phpstan-phpunit": "^1.0",
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Devfaysal\\FilamentGuard\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Devfaysal\\FilamentGuard\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "analyse": "vendor/bin/phpstan analyse"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Devfaysal\\FilamentGuard\\FilamentGuardServiceProvider"
+      ],
+      "aliases": {
+        "FilamentGuard": "Devfaysal\\FilamentGuard\\Facades\\FilamentGuard"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
