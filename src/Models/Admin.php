@@ -49,7 +49,7 @@ class Admin extends Authenticatable implements FilamentUser
      */
     protected static function newFactory()
     {
-        return config('laravel-admin.factory')::new();
+        return config('filament-guard.factory')::new();
     }
 
     public function canAccessFilament(): bool
