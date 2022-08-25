@@ -1,4 +1,4 @@
-# Isolated Guard for accessing Filament admin dashboard
+# Separate user model and guard for Filament
 
 Install
 ```bash
