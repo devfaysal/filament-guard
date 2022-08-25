@@ -2,18 +2,18 @@
 
 namespace Devfaysal\FilamentGuard;
 
+use Devfaysal\FilamentGuard\Filament\Resources\AdminResource;
 use Devfaysal\FilamentGuard\Filament\Resources\PermissionResource;
 use Devfaysal\FilamentGuard\Filament\Resources\RoleResource;
-use Filament\Events\ServingFilament;
 use Filament\PluginServiceProvider;
-use Illuminate\Support\Facades\Event;
 use Spatie\LaravelPackageTools\Package;
 
 class FilamentGuardServiceProvider extends PluginServiceProvider
 {
     protected array $resources = [
-        PermissionResource::class,
+        AdminResource::class,
         RoleResource::class,
+        PermissionResource::class,
     ];
 
     public function configurePackage(Package $package): void

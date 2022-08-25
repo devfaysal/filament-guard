@@ -5,7 +5,7 @@ namespace Devfaysal\FilamentGuard\Filament\Resources;
 use Devfaysal\FilamentGuard\Filament\Resources\RoleResource\Pages\CreateRole;
 use Devfaysal\FilamentGuard\Filament\Resources\RoleResource\Pages\EditRole;
 use Devfaysal\FilamentGuard\Filament\Resources\RoleResource\Pages\ListRoles;
-use Filament\Forms\Components\BelongsToManyCheckboxList;
+use Filament\Forms\Components\CheckboxList;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -27,8 +27,8 @@ class RoleResource extends Resource
         return $form
             ->schema([
                 TextInput::make('name')->required()->label('Role'),
-                TextInput::make('guard_name')->required()->default('web'),
-                BelongsToManyCheckboxList::make('permissions')->relationship('permissions', 'name')
+                TextInput::make('guard_name')->required()->default('admin'),
+                CheckboxList::make('permissions')->relationship('permissions', 'name')
             ]);
     }
 

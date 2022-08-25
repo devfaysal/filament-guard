@@ -25,7 +25,7 @@ class PermissionResource extends Resource
         return $form
             ->schema([
                 TextInput::make('name')->required()->label('Permission'),
-                TextInput::make('guard_name')->required()->default('web'),
+                TextInput::make('guard_name')->required()->default('admin'),
             ]);
     }
 

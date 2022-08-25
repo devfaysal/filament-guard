@@ -1,5 +1,5 @@
 # Isolated Guard for accessing Filament admin dashboard
-
+**Roles and Permissions managed by [spatie/laravel-permission](https://github.com/spatie/laravel-permission)**
 Install
 ```bash
 composer require devfaysal/filament-guard
