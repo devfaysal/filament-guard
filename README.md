@@ -1,5 +1,9 @@
 # Isolated Guard for accessing Filament admin dashboard
 
+Install
+```bash
+composer require devfaysal/filament-guard
+```
 
 Publish Migration
 ```bash
